@@ -4,10 +4,4 @@ With SalariosRankeados As (
         Employee.Salary,
         DENSE_RANK() Over (Partition by Department.Id order by Employee.Salary DESC) AS RankSalarios
         From Employee Join Department ON Employee.departmentId = Department.Id
-)
-    Select
-        Department,
-        Employee,
-        Salary
-    From SalariosRankeados
-    Where RankSalarios <= 3
+)Select Department,Employee,Salary From SalariosRankeados Where RankSalarios <= 3
