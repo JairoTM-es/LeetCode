@@ -1,7 +1,5 @@
 def patchesNeeded(array, n):
 
-    
-
     faltantes = 1
     i = 0
     patches = 0
